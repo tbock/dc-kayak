@@ -1,0 +1,7 @@
+django>=2.2.5,<=2.2.99
+psycopg2-binary>=2.8.3,<=2.8.99
+requests==2.22.0
+djangorestframework>=3.10.3,<=3.10.99
+gunicorn>=19.9.0,<=19.9.99
+whitenoise>=4.1.3,<=4.1.99
+django-cors-headers
