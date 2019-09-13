@@ -28,7 +28,7 @@ export default {
   methods: {
     async loadRivers() {
       await axios
-        .get("http://dckayak.herokuapp.com/api/flows/?format=json")
+        .get(`${process.env.VUE_APP_DCKAKAY_API}/api/flows/`)
         .then(resp => {
           this.$store.dispatch("setRivers", resp.data);
         })
