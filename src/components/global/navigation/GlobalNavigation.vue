@@ -1,6 +1,8 @@
 <template>
   <header>
-    <span>DC KAYAK</span>
+    <div class="container ">
+      <div class="row nav-wrapper">
+        <main-logo />
     <!-- <nav>
       <router-link v-for="(item, index) in navItems" :key="index" :to="item.path">{{ item.title }}</router-link>
     </nav>-->
@@ -15,11 +17,17 @@
         <i class="icon icon-thumbs-up"></i>Support
       </at-menu-item>
     </at-menu>
+      </div>
+    </div>
   </header>
 </template>
 <script>
+import MainLogo from "./components/MainLogo";
 export default {
   name: "GlobalNavigation",
+  components: {
+    "main-logo": MainLogo
+  },
   data: () => {
     return {
       navItems: [
@@ -43,15 +51,12 @@ export default {
 <style lang="scss" scoped>
 header {
   width: 100vw;
-  min-height: 50px;
+  border-bottom:1px solid #e2ecf4;
+  .nav-wrapper {
+    min-height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
-  nav {
-    a {
-      margin-left: 1rem;
-    }
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="container">
     <template v-if="rivers.length !== 0">
       <div v-for="(river, index) in rivers" class="river" :key="index">
         <span>{{ river.name }}</span>
@@ -7,7 +7,12 @@
       </div>
     </template>
     <template v-else>
-      <p>something went wrong.</p>
+      <div class="row flex-center">
+        <div class="col-auto">
+          <h1>Whoops</h1>
+          <p>Data Unavailable</p>
+        </div>
+      </div>
     </template>
   </main>
 </template>
@@ -17,7 +22,7 @@ export default {
   name: "Home",
   data: () => {
     return {
-      errors: {}
+      errors: {},
     };
   },
   methods: {
@@ -50,10 +55,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-main {
-  width: 80vw;
-  margin: 0 auto;
-}
 .river {
   align-items: center;
   cursor: pointer;
