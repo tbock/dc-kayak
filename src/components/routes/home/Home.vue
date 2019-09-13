@@ -22,7 +22,7 @@ export default {
   name: "Home",
   data: () => {
     return {
-      errors: {},
+      errors: {}
     };
   },
   methods: {
@@ -34,12 +34,12 @@ export default {
         })
         .catch(err => {
           this.errors = err;
-           this.$Notify({
-          title: err.name,
-          message: err.message,
-          type: 'error',
-          duration: 10000
-        })
+          this.$Notify({
+            title: err.name,
+            message: err.message,
+            type: "error",
+            duration: 10000
+          });
         });
     }
   },

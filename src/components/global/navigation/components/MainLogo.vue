@@ -1,8 +1,8 @@
 <template>
-    <span >DC KAYAK</span>
+  <span>DC KAYAK</span>
 </template>
 <script>
 export default {
-    name: "MainLogo",
-}
+  name: "MainLogo"
+};
 </script>

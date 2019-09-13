@@ -2,10 +2,10 @@ import Home from "./components/routes/home/Home";
 // import About from "./components/routes/about/About";
 
 const routes = {
-  mode: 'history',
+  mode: "history",
   routes: [
     {
-      path: '/',
+      path: "/",
       component: Home,
       name: "home"
     }

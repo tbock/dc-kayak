@@ -5,11 +5,11 @@
   </div>
 </template>
 <script>
-import GlobalNavigation from './components/global/navigation/GlobalNavigation.vue';
+import GlobalNavigation from "./components/global/navigation/GlobalNavigation.vue";
 export default {
   name: "App",
   components: {
-      "global-navigation":GlobalNavigation
+    "global-navigation": GlobalNavigation
   }
 };
 </script>
