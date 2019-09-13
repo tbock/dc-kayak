@@ -1,6 +1,12 @@
 <template>
-  <div class="home">
-    <h1>HOME</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <template v-if="rivers.length > 0">
+          <at-table :columns="columns" :data="rivers"></at-table>
+        </template>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -10,17 +16,34 @@ export default {
   name: "Home",
   data: () => {
     return {
-      errors: {}
+      errors: {},
+      columns: [
+        {
+          title: "Name",
+          key: "name"
+        },
+        {
+          title: "Flow Rate",
+          key: "flow-rate",
+          sortType: "normal"
+        },
+        {
+          title: "Class",
+          key: "grade"
+        }
+      ]
     };
   },
   methods: {
     async loadRivers() {
       await axios
-        .get("https://cors-anywhere.herokuapp.com/http://dckayak.herokuapp.com/api/flows/?format=json")
+        .get(
+          "https://cors-anywhere.herokuapp.com/http://dckayak.herokuapp.com/api/flows/?format=json"
+        )
         .then(resp => {
           this.$store.dispatch("setRivers", resp.data);
           this.$Notify({
-            title: 'Data Loaded',
+            title: "Data Loaded",
             type: "success",
             duration: 5000
           });
