@@ -10,10 +10,10 @@
           <at-menu-item name="1">
             <i class="icon icon-activity"></i>River Flows
           </at-menu-item>
-          <at-menu-item name="4">
+          <at-menu-item name="2">
             <i class="icon icon-map"></i>Playspots Map
           </at-menu-item>
-          <at-menu-item name="4">
+          <at-menu-item name="3">
             <i class="icon icon-thumbs-up"></i>Support
           </at-menu-item>
         </at-menu>

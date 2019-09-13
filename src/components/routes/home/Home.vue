@@ -5,6 +5,7 @@
         <span>{{ river.name }}</span>
         <span>Flow Rate: {{ river.latest_flow }}</span>
       </div>
+      <!-- <at-table :columns="columns1" :data="data1" stripe></at-table> -->
     </template>
     <template v-else>
       <div class="row flex-center">
@@ -28,7 +29,7 @@ export default {
   methods: {
     async loadRivers() {
       await axios
-        .get("http://dckayak.herokuapp.com/api/flows/?format=json")
+        .get("https://cors-anywhere.herokuapp.com/http://dckayak.herokuapp.com/api/flows/?format=json")
         .then(resp => {
           this.$store.dispatch("setRivers", resp.data);
         })
